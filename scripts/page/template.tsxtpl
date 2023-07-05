@@ -1,0 +1,35 @@
+import { GetStaticProps } from 'next'
+import React from "react"
+import Layout from '@/components/common/Layout/Layout'
+import {BasePageProps} from "@/interfaces";
+
+
+interface ${pageConstName}Props extends BasePageProps {
+    /* Page props */
+}
+
+const ${pageConstName}: React.FC<${pageConstName}Props> = () => {
+    return (
+        <Layout>
+            {/* Page body */}
+        </Layout>
+    )
+}
+
+export const getStaticProps: GetStaticProps<${pageConstName}props> = async () => {
+
+    return {
+        props: {
+            meta: {
+                title: pageTitle,
+                description: '',
+                keywords: ''
+            },
+            header: {},
+            sandwich: {}
+        },
+        revalidate: 1
+    }
+}
+
+export default ${pageConstName};

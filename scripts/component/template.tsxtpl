@@ -1,0 +1,16 @@
+import React from 'react';
+import { Container } from './${componentConstName}.styled';
+
+interface ${componentConstName}Props {
+    /* Component props */
+}
+
+const ${componentConstName}: React.FC<${componentConstName}Props> = () => {
+    return (
+        <Container>
+            {/* Component body */}
+        </Container>
+    )
+}
+
+export default ${componentConstName};
