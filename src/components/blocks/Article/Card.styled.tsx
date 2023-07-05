@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Image from '@/components/common/Image/Image';
 import { mediaBreakpointDown } from '@/style/mixins';
+import { Swiper } from 'swiper/react';
 
 // Создать следующий компонент-интерфейс данной карточки для слайдинга
 // НЕ ЗАБЫТЬ ПРЕВРАТИТЬ ЕЕ ВО СВАЙПЕР
@@ -11,7 +12,7 @@ export const CardInterface = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
 
     padding: 40px;
 
@@ -40,13 +41,23 @@ export const ImageDiv = styled(Image)`
     display: contents;
 `;
 
-export const IElipse = styled.div`
+/**
+ * Интерактивные элементы нежелательно делать обычными div
+ * В данном случае можно использовать тег button, чтобы не нарушать семантику
+ */
+export const IElipse = styled.button`
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
     background-color: #FFFFFF26;
+    border: none;
+    padding: 0;
+    
+    &:last-child {
+        margin-left: 10px;
+    }
 `;
 
 export const IUpperDiv = styled.div`
@@ -151,12 +162,12 @@ export const ILowerDesc = styled.div`
     display: flex;
 `
 
-export const CardImage = styled.div`
+export const CardSlider = styled(Swiper)`
     width: 100%;
     height: 100%;
 
     border-radius: 0.833vw;
-    position: absolute;
+    position: relative;
     overflow: hidden;
 
     ${mediaBreakpointDown('xs')} {

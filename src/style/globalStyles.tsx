@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
     button {
         font-family: ${variables.fonts.default};
+        cursor: pointer;
         
         &, &:active,
         &:focus {

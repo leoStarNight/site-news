@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, Container, ImageDiv } from './CardSection.styled';
-import CardImg from 'public/images/PageHero/Mishel.jpg'
+import {Container } from './CardSection.styled';
 import CardGenerator from './CardGenerator';
 
 interface CardSectionProps {
@@ -10,7 +9,7 @@ interface CardSectionProps {
 const CardSection: React.FC<CardSectionProps> = () => {
     return (
         <Container>
-            {/* Component body */}
+            {/* Лишняя обертка, тело компонента CardGenerator можно вставить сразу сюда */}
             <CardGenerator/>
         </Container>
     )

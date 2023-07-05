@@ -5,16 +5,14 @@ import Weather from './Weather';
 
 interface ArticleProps {
     /* Component props */
-    currentState: string
 }
 
-const Article: React.FC<ArticleProps> = (args) => {
+const Article: React.FC<ArticleProps> = () => {
     return (
         <Container>
-            {/* Component body */}
             <TitleContainer>Ближайшие мероприятия</TitleContainer>
             <DividedSection>
-                <Card currentState={args.currentState}/>
+                <Card/>
                 <Weather/>
             </DividedSection>
         </Container>

@@ -1,6 +1,23 @@
-import { mediaBreakpointDown, mediaBreakpointUp } from '@/style/mixins';
-import styled from 'styled-components';
+import { mediaBreakpointDown } from '@/style/mixins';
+import styled, { keyframes } from 'styled-components';
 import Image from '@/components/common/Image/Image';
+
+const shine = keyframes`
+    to {
+        background-position-x: -200%;
+    }
+`
+
+export const Skeleton = styled.div`
+    width: 100%;
+    height: 100%;
+    min-height: 1em;
+    background: #eee;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s ${shine} linear infinite;
+`
 
 export const WeatherDiv = styled.div`
     display: flex;

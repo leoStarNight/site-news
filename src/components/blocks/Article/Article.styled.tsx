@@ -7,6 +7,9 @@ export const Container = styled.div`
         
 `;
 
+/**
+ * Неиспользуемый styled-component
+ */
 export const ImageDiv = styled(Image)`
     position: absolute;
 `;
