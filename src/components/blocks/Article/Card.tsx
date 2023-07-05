@@ -6,6 +6,7 @@ import ArrowLeft from '../../../icons/Article/ArrowLeft.svg';
 import ArrowRight from '../../../icons/Article/ArrowRight.svg';
 import Dot from '../../../icons/Article/Dot.svg';
 import Data from 'public/data.json';
+import copy from 'clipboard-copy';
 
 
 interface ArticleProps {
@@ -40,7 +41,9 @@ const Card: React.FC<ArticleProps> = (args) => {
         <CardDiv>
             <CardInterface>
                 <IUpperDiv>
-                    <IElipse>
+                    <IElipse onClick={() => {
+                        copy(`${Data.main.name} | ${Data.main.about} | ${Data.main.data} | ${Data.main.location}`);
+                    }}>
                         <Link/>
                     </IElipse>
                     <IUpperRight>

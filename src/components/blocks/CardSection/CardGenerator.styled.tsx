@@ -33,6 +33,39 @@ export const Card = styled.div`
     border-radius: 16px;
 `
 
+export const IconElipse = styled.div`
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #23232333;
+
+    display: flex;
+    justify-content: center;
+
+    svg {
+        width: 24px;
+    }
+
+    ${mediaBreakpointDown('xl')} {
+        width: 34px;
+        height: 34px;
+
+        svg {
+            width: 17px;
+        }
+    }
+`
+
+export const PaddingIcon = styled.div`
+    position: absolute;
+    padding: 20px;
+    z-index: 10;
+
+    ${mediaBreakpointDown('xl')} {
+        padding: 12px;
+    }
+`
+
 export const ImageDiv = styled(Image)`
     //position: absolute;
     border-radius: 16px;
