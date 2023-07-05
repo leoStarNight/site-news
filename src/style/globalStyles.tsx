@@ -48,6 +48,13 @@ const GlobalStyle = createGlobalStyle`
             outline: none;
         }
     }
+
+    .swiper-button-next {
+        display: none;
+    }
+    .swiper-button-prev {
+        display: none;
+    }
 `;
 
 export default GlobalStyle;

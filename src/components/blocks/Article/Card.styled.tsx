@@ -181,3 +181,32 @@ export const CardDiv = styled.div`
     }
 `
 
+export const PaddingInterface = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+`
+
+export const InterfaceContainer = styled.div`
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+
+    * {
+        position: relative;
+        z-index: 99;
+        color: white
+    }
+
+    ${mediaBreakpointDown('xl')} {
+        padding: 28px;
+    }
+
+    ${mediaBreakpointDown('xs')} {
+        padding: 12px;
+    }
+`
